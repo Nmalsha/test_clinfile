@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checking numbers with js</title>
+  </head>
+  <body>
+    <button onclick="run()">Check</button>
+    <h3 id="result"></h3>
+    <script>
+      function run() {
+        var numbers = [
+          7, -10, 13, 8, 4, -7.2, -12, -3.7, 3.5, -9.6, 6.5, -1.7, -6.2, 7,
+        ];
+        // Result: -1.7
+        console.log("Result: " + closestToZero(numbers));
+      }
+
+      function closestToZero(numbers) {
+        if (!numbers.length) {
+          return 0;
+        }
+
+        var closest = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+          if (closest === 0) {
+            closest = numbers[i];
+          } else if (numbers[i] > 0 && numbers[i] <= Math.abs(closest)) {
+            closest = numbers[i];
+          } else if (numbers[i] < 0 && -numbers[i] < Math.abs(closest)) {
+            closest = numbers[i];
+          }
+        }
+
+        return closest;
+      }
+    </script>
+  </body>
+</html>
