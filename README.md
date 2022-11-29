@@ -1,54 +1,30 @@
-# ToDoList
-
-## Project 8 - Parcours développeur d'application PHP/Symfony
-
-### Environnement de développement
-
-    -Linux
-    -Composer 2.3.7
-    -PHP 7.4.3
-    -Symfony 5.4
-    -Apache2
-    -MySQL
-    -git
+# Test CLINFILE
 
 ### Instalation
 
 1.Clonez le repository Github
 
-    git clone https://github.com/Nmalsha/phpUnitTest_P8.git
+    git clone https://github.com/Nmalsha/test_clinfile.git
 
-2. Configure BDD connect on .env file
+2.start server
 
-3.Créer la BDD
+        php -S localhost:8000
 
-    composer install
+3. Questions
 
-4.Créer la BDD
+   1. question PHP
 
-    php bin/console doctrine:database:create
+      1.1 Trou de mémoire
+      go to http://localhost:8000/index.php and click on submit button.You can see the correct file path ( do not forget to the file in your /tmp/Documents)
 
-5.Créer les tables
+      1.2 Créateur de requête
+      go to http://localhost:8000/example1.php you can see the expected result here for the first json file
+      go to http://localhost:8000/example2.php you can see the expected result here for the second json file
 
-    php bin/console doctrine:schema:create
+   2. Javascript
 
-6.Installer la Fixture (démo de données fictives)
+      2.1 question 1
+      go to http://localhost:8000/checknumbers.html and click the button , open your console to check the result
 
-        php bin/console doctrine:fixture:load
-
-7.start server
-
-        php -S localhost:8000 -t public
-
-8.Test
-
-        test datafixture - php bin/console doctrine:fixtures:load --env=test
-        vendor/bin/phpunit --filter=nome de fonction test
-        or
-        bin/phpunit --coverage-html chémas de votre repo local/raport
-
-        Tester les requêtes avec un compte User
-
-    login: admin12@gmail.com
-
-    password: admin
+      2.2 question 2
+      go to http://localhost:8000/separateur.html and please see the explanation with the example .Check the result in the console
